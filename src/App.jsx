@@ -97,7 +97,7 @@ const App = () => {
 
   const getUniqueOptions = (field) => {
     const uniqueValues = [...new Set(data.map(row => row[field]))];
-    return uniqueValues.map(value => ({
+    return uniqueValues.filter(value => value).map(value => ({
       label: value || "Unknown",
       value
     }));
@@ -135,6 +135,7 @@ const App = () => {
                           value={filters[field] || ""}
                           onChange={(event) => handleFilterChange(event, field)}
                           renderValue={(selected) => selected || "All"}
+                          label={getPlaceholder(field)}
                         >
                           <MenuItem value="">
                             <em>All</em>
