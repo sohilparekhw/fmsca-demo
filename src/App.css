@@ -1,0 +1,48 @@
+
+.table-container {
+  margin: 10px;
+  padding: 20px;
+  max-width: 100%;
+  overflow: hidden;
+}
+.table-header{
+  position:fixed;
+}
+
+.table-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 600px; 
+}
+
+.table-scroll {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.table {
+  min-width: 800px; 
+}
+
+.table-cell {
+  padding: 16px;
+}
+
+.pagination {
+  background-color: #f5f5f5; 
+  padding: 10px;
+}
+
+@media (max-width: 600px) {
+  .table {
+    font-size: 0.75rem;
+  }
+
+  .table-cell {
+    padding: 8px;
+  }
+
+  .pagination {
+    font-size: 0.75rem;
+  }
+}
