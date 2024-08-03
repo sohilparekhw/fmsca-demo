@@ -17,6 +17,7 @@ import {
 } from "@mui/material";
 import "./App.css"; 
 
+const apiBaseUrl = import.meta.env.VITE_API_BASE_URL;
 
 const getPlaceholder = (field) => {
   const placeholders = {
@@ -57,7 +58,7 @@ const App = () => {
 
   useEffect(() => {
     axios
-      .get("/data.json")
+      .get(`${apiBaseUrl}/data.json`)
       .then((response) => {
        // console.log("Fetched data:", response.data);
         if (Array.isArray(response.data)) {
